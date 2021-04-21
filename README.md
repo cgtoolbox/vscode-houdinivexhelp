@@ -14,19 +14,6 @@ This extension is very handy to use with the VEX language support for VSCode by 
 
 In order to use VSCode seamlessly on your wrangle node, you can use the plugin [HoudiniExprEditor](http://cgtoolbox.com/houdini-expression-editor/) from www.cgtoolbox.com.
 
-
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
 ## Release Notes
 
 ### 0.0.1
