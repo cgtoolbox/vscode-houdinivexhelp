@@ -20,13 +20,17 @@ export function activate(context: vscode.ExtensionContext) {
 
 	let disposable = vscode.commands.registerCommand('houdinivexhelp.openVexHelp', () => {
 
-		var helpURL = "http://127.0.0.1:48626/vex/functions/";
-
-		var editor = vscode.window.activeTextEditor;
+		const workbenchConfig = vscode.workspace.getConfiguration('houdinivexhelp');
+		const helpURL = workbenchConfig.get("houdiniHelpURL") as string;
+		if(!helpURL.startsWith("http"))
+		{
+			vscode.window.showInformationMessage("Invalid URL setting: '" + helpURL + "'");
+			return;
+		}
+		
 		var token = getCurrentTextSelection();
 		if(token !== ""){
-			helpURL += token;
-			open(helpURL);
+			open(helpURL + token);
 		}
 		
 		vscode.window.showInformationMessage("Opening vex help page: " + helpURL);

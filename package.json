@@ -2,7 +2,7 @@
 	"name": "houdinivexhelp",
 	"displayName": "Houdini Vex Help",
 	"description": "Extension to open Houdini vex help pages from VSCode with a command.",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "Guillaume Jobst",
 	"engines": {
 		"vscode": "^1.55.0"
@@ -25,7 +25,19 @@
 			"command": "houdinivexhelp.openVexHelp",
 			"key": "f2",
 			"when": "editorTextFocus"
-		}
+		},
+		"configuration":[
+			{
+				"title": "HoudiniVexHelp",
+				"properties": {
+					"houdinivexhelp.houdiniHelpURL":{
+						"type":"string",
+						"default":"http://127.0.0.1:48626/vex/functions/",
+						"description": "Base URL to construct the help page address from, your current selected text will be appened to it."
+					}
+				}
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
