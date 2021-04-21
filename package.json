@@ -1,0 +1,53 @@
+{
+	"name": "houdinivexhelp",
+	"displayName": "Houdini Vex Help",
+	"description": "Extension to open Houdini vex help pages from VSCode with a command.",
+	"version": "0.0.1",
+	"publisher": "Guillaume Jobst",
+	"engines": {
+		"vscode": "^1.55.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:houdinivexhelp.openVexHelp"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "houdinivexhelp.openVexHelp",
+				"title": "Open Vex Help"
+			}
+		],
+		"keybindings":{
+			"command": "houdinivexhelp.openVexHelp",
+			"key": "f2",
+			"when": "editorTextFocus"
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.55.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.19.0",
+		"@typescript-eslint/eslint-plugin": "^4.14.1",
+		"@typescript-eslint/parser": "^4.14.1",
+		"glob": "^7.1.6",
+		"mocha": "^8.2.1",
+		"typescript": "^4.1.3",
+		"vscode-test": "^1.5.0"
+	},
+	"dependencies": {
+		"open": "^8.0.6"
+	}
+}
