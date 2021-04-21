@@ -31,9 +31,9 @@ export function activate(context: vscode.ExtensionContext) {
 		var token = getCurrentTextSelection();
 		if(token !== ""){
 			open(helpURL + token);
+			vscode.window.showInformationMessage("Opening vex help page: " + helpURL);
 		}
 		
-		vscode.window.showInformationMessage("Opening vex help page: " + helpURL);
 	});
 
 	context.subscriptions.push(disposable);
