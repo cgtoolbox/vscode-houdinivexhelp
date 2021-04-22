@@ -2,6 +2,8 @@
 
 This extension mimic the behaviour of the wrangle nodes "open help from selected text", but directly in vscode.
 
+![](https://raw.githubusercontent.com/cgtoolbox/vscode-houdinivexhelp/master/images/houdinivexhelp_ex.gif)
+
 ## Features
 
 Select a function name in your code, run the command "Open Vex Help" from the command palette (ctrl+shift+p) or press F2, and it opens the help pages from the Houdini help of the function you selected.
@@ -17,6 +19,8 @@ In order to use VSCode seamlessly on your wrangle node, you can use the plugin [
 ## Settings
 
 houdinivexhelp.houdiniHelpURL can be set to the URL you want to use, you can set it to sidef webside or local default builtin help from Houdini (http://127.0.0.1:48626/vex/functions/")
+
+![](https://raw.githubusercontent.com/cgtoolbox/vscode-houdinivexhelp/master/images/houdinivexhelp_setting.gif)
 
 Default: https://www.sidefx.com/docs/houdini18.5/vex/functions/
 
@@ -48,4 +52,4 @@ contact@cgtoolbox.com
 https://github.com/cgtoolbox
 
 ---
-**Enjoy!**
+**Enjoy! :) **
