@@ -10,11 +10,11 @@ Select a function name in your code, run the command "Open Vex Help" from the co
 
 ## Requirements
 
-[Houdini](https://www.sidefx.com/) must be installed on your machine.
-
 This extension is very handy to use with the VEX language support for VSCode by [Mel Massadian](https://github.com/melMass/vscode-vex).
 
 In order to use VSCode seamlessly on your wrangle node, you can use the plugin [HoudiniExprEditor](http://cgtoolbox.com/houdini-expression-editor/) from www.cgtoolbox.com.
+
+If you want to use builtin Houdini help server (see 'settings'), [Houdini](https://www.sidefx.com/) must be installed on your machine.
 
 ## Settings
 
