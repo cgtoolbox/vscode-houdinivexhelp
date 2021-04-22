@@ -16,14 +16,18 @@ In order to use VSCode seamlessly on your wrangle node, you can use the plugin [
 
 ## Settings
 
-houdinivexhelp.houdiniHelpURL can be set to the URL you want to use, by default it uses the local default builtin help from Houdini (http://127.0.0.1:48626/vex/functions/")
+houdinivexhelp.houdiniHelpURL can be set to the URL you want to use, you can set it to sidef webside or local default builtin help from Houdini (http://127.0.0.1:48626/vex/functions/")
 
-But it also can be set to sidefx webside specific houdini version like: https://www.sidefx.com/docs/houdini18.0/vex/functions/
+Default: https://www.sidefx.com/docs/houdini18.5/vex/functions/
 
 it **MUST** end with '/'. Your current text selection will be added at the end of the URL.
 
-
 ## Release Notes
+
+### 0.0.3
+
+Clean selected text before constructing the url adress.
+Change default value of the setting houdinivexhelp.houdiniHelpURL.
 
 ### 0.0.2
 

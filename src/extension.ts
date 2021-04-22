@@ -11,6 +11,10 @@ export function getCurrentTextSelection(){
 
 	var selection = editor.selection;
 	var token = editor.document.getText(selection);
+	if(token !== '')
+	{
+		token = token.replace(/[^a-zA-Z0-9_]/g, '');
+	}
 	return token;
 }
 
@@ -33,7 +37,6 @@ export function activate(context: vscode.ExtensionContext) {
 			open(helpURL + token);
 			vscode.window.showInformationMessage("Opening vex help page: " + helpURL);
 		}
-		
 	});
 
 	context.subscriptions.push(disposable);
