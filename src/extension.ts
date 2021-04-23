@@ -9,7 +9,12 @@ export function getCurrentTextSelection(){
 		return "";
 	}
 
-	var selection = editor.selection;
+        var cursorPosition = editor.selection.start;
+        var wordRange = editor.document.getWordRangeAtPosition(cursorPosition);
+        var highlight = editor.document.getText(wordRange);    
+
+        var token = highlight;
+	
 	var token = editor.document.getText(selection);
 	if(token !== '')
 	{
